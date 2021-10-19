@@ -3,6 +3,7 @@ val junit_version: String by project
 
 plugins {
     kotlin("jvm") version "1.5.31"
+    `maven-publish`
 }
 
 group = "fr.sdecout.annotations"
@@ -35,4 +36,35 @@ tasks {
     test {
         useJUnitPlatform()
     }
+    jar {
+        manifest {
+            attributes(mapOf(
+                "Implementation-Title" to project.name,
+                "Implementation-Version" to project.version
+            ))
+        }
+    }
 }
+
+java {
+    withSourcesJar()
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/sylvaindecout/documentation-annotations")
+            credentials {
+                username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
+            }
+        }
+    }
+    publications {
+        register<MavenPublication>("gpr") {
+            from(components["java"])
+        }
+    }
+}
+
