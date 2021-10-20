@@ -1,5 +1,4 @@
 val jvm_version: String by project
-val junit_version: String by project
 
 plugins {
     kotlin("jvm") version "1.5.31"
@@ -15,11 +14,6 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
-
-    testImplementation(kotlin("test-junit5"))
-    testImplementation("org.junit.jupiter", "junit-jupiter-api", junit_version)
-    testImplementation("org.junit.jupiter", "junit-jupiter-params", junit_version)
-    testRuntimeOnly("org.junit.jupiter", "junit-jupiter-engine", junit_version)
 }
 
 tasks {
@@ -27,14 +21,6 @@ tasks {
         kotlinOptions {
             jvmTarget = jvm_version
         }
-    }
-    compileTestKotlin {
-        kotlinOptions {
-            jvmTarget = jvm_version
-        }
-    }
-    test {
-        useJUnitPlatform()
     }
     jar {
         manifest {
