@@ -69,7 +69,7 @@ object DomainDrivenDesign {
      */
     @MustBeDocumented
     @Target(CLASS)
-    annotation class Repository
+    annotation class Repository(val value: KClass<*>)
 
     /**
      * Sometimes, it just isn’t a thing.
@@ -171,6 +171,6 @@ object DomainDrivenDesign {
     @Inherited
     @MustBeDocumented
     @Target(CLASS)
-    annotation class Aggregate
+    annotation class Aggregate(val aggregateRoot: KClass<*>, val members: Array<KClass<*>>)
 
 }
