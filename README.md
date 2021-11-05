@@ -1,5 +1,9 @@
 # Documentation annotations
 
+[![Gitmoji](https://img.shields.io/badge/gitmoji-%20%F0%9F%98%9C%20%F0%9F%98%8D-FFDD67.svg)](https://gitmoji.dev)
+
+## About
+
 This library defines annotations that can be used to document code, with the goal to make concepts explicit and to provide a quick way to find out more about them.
 
 You can check out [Cyril Martraire](https://twitter.com/cyriux) 's book, [Living Documentation: Continuous Knowledge Sharing by Design](http://informit.com/livingdoc), to understand better the general approach.
