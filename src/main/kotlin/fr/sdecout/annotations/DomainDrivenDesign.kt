@@ -1,7 +1,7 @@
 package fr.sdecout.annotations
 
 import java.lang.annotation.Inherited
-import kotlin.annotation.AnnotationTarget.CLASS
+import kotlin.annotation.AnnotationTarget.*
 import kotlin.reflect.KClass
 
 /**
@@ -115,7 +115,12 @@ object DomainDrivenDesign {
     @Inherited
     @MustBeDocumented
     @Target(CLASS)
-    annotation class Entity
+    annotation class Entity {
+        @Inherited
+        @MustBeDocumented
+        @Target(FIELD, PROPERTY, FUNCTION)
+        annotation class Id
+    }
 
     /**
      * Some objects describe or compute some characteristic of a thing.
