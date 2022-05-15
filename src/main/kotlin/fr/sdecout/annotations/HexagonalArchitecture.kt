@@ -1,6 +1,6 @@
 package fr.sdecout.annotations
 
-import kotlin.annotation.AnnotationTarget.TYPE
+import kotlin.annotation.AnnotationTarget.CLASS
 
 /**
  * The idea behind Hexagonal Architecture, aka Ports & Adapters Architecture, is to think about our application as the
@@ -24,7 +24,7 @@ object HexagonalArchitecture {
      * will actually be injected where the interface is defined as a type hint.
      */
     @MustBeDocumented
-    @Target(TYPE)
+    @Target(CLASS)
     annotation class Port(val value: Type) {
         enum class Type {
             DRIVING, DRIVEN
@@ -42,7 +42,7 @@ object HexagonalArchitecture {
      * object that implements interface B.
      */
     @MustBeDocumented
-    @Target(TYPE)
+    @Target(CLASS)
     annotation class LeftAdapter
 
     /**
@@ -56,7 +56,7 @@ object HexagonalArchitecture {
      * object that implements interface B.
      */
     @MustBeDocumented
-    @Target(TYPE)
+    @Target(CLASS)
     annotation class RightAdapter
 
 }
