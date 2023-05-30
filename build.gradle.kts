@@ -1,4 +1,4 @@
-val jvm_version: String by project
+val jvmVersion = "11"
 
 plugins {
     kotlin("jvm") version "1.5.31"
@@ -19,7 +19,7 @@ dependencies {
 tasks {
     compileKotlin {
         kotlinOptions {
-            jvmTarget = jvm_version
+            jvmTarget = jvmVersion
         }
     }
     jar {
