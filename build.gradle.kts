@@ -5,9 +5,6 @@ plugins {
     `maven-publish`
 }
 
-group = "fr.sdecout.annotations"
-version = "0.1.6"
-
 repositories {
     jcenter()
 }
