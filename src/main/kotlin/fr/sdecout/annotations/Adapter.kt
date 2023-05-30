@@ -6,7 +6,7 @@ import kotlin.reflect.KClass
 /**
  * Marks this class as an implementation of Adapter design pattern.
  *
- * Strategy is a structural pattern defined by GoF in *Design Patterns: Elements of Reusable Object-Oriented Software*.
+ * Adapter is a structural pattern defined by GoF in *Design Patterns: Elements of Reusable Object-Oriented Software*.
  *
  * @see <a href="https://refactoring.guru/design-patterns/adapter">Refactoring.Guru</a>
  */
