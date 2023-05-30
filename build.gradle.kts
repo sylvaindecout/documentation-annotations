@@ -1,7 +1,7 @@
 val jvmVersion = "11"
 
 plugins {
-    kotlin("jvm") version "1.5.31"
+    kotlin("jvm") version "1.8.21"
     `maven-publish`
 }
 
