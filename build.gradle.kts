@@ -6,7 +6,7 @@ plugins {
 }
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -18,6 +18,10 @@ tasks {
         kotlinOptions {
             jvmTarget = jvmVersion
         }
+    }
+    compileJava {
+        sourceCompatibility = jvmVersion
+        targetCompatibility = jvmVersion
     }
     jar {
         manifest {
