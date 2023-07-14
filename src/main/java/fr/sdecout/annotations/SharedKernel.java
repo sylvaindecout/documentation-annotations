@@ -37,5 +37,4 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Documented
 @Retention(RUNTIME)
 @Target(PACKAGE)
-public @interface SharedKernel {
-}
+public @interface SharedKernel {}

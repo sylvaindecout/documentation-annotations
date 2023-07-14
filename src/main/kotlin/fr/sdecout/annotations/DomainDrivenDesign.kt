@@ -173,9 +173,10 @@ object DomainDrivenDesign {
      * domain scenario hinting at an important new insight? Such changes often improve the model’s expressiveness and
      * flexibility as well as resolving the transactional and distributional issues.
      */
+    @Entity
     @Inherited
     @MustBeDocumented
     @Target(CLASS)
-    annotation class Aggregate(val aggregateRoot: KClass<*>, val members: Array<KClass<*>>)
+    annotation class AggregateRoot
 
 }
