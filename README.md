@@ -42,7 +42,7 @@ repositories {
 
 ## Release
 
-1. Increment version in `build.gradle.kts` (eg. `version = "0.1.4"`)
+1. Increment version in `build.properties` (eg. `version=0.1.4`)
 2. Push commit (eg. `:bookmark: Increment version from 0.1.3 to 0.1.4`)
 3. Create a new release
    1. Create a new tag (eg. `v0.1.4-alpha`)
